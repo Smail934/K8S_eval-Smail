@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-cloud-service-smail
+spec:
+  selector:
+    app: node-cloud-smail
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  
+  type: LoadBalancer

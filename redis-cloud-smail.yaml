@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-cloud-smail
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: node-cloud-smail
+  template:
+    metadata:
+      labels:
+        app: node-cloud-smail
+    spec:
+      containers:
+        - name: node-redis
+          image: cloud.canister.io:5000/arhturescriou/node-redis
+          ports:
+            - containerPort: 5000
+          env:
+            - name: PORT
+              value: "5000"
+            - name: REDIS_URL
+              value: "redis://redis-smail:6379"
+      imagePullSecrets:
+        - name: regcred
+          
