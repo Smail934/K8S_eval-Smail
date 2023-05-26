@@ -1,4 +1,4 @@
-CFA_INSTA GABOUR SMAIL
+# CFA_INSTA GABOUR SMAIL
 
 Pour gérer le déploiement de l'application, suivez les étapes ci-dessous :
 
@@ -6,7 +6,7 @@ Pour gérer le déploiement de l'application, suivez les étapes ci-dessous :
 
     bash bash.sh
 
-Partie React
+# Partie React
 
 Avant de créer l'image Docker et déployer l'application React, assurez-vous d'être connecté à votre compte Docker à l'aide de la commande docker login.
 
